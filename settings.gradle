@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Pluto Logger"
 include ':sample'
+include ':plugin-logger'
