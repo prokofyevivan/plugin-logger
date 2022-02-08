@@ -3,6 +3,7 @@
     package="com.logger.demo">
 
     <application
+        android:name=".DemoApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_background"
         android:label="@string/app_name"

@@ -2,6 +2,7 @@ package com.pluto.plugins.logger.internal
 
 import android.util.Log
 import androidx.annotation.Keep
+import com.pluto.plugins.logger.BuildConfig
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
