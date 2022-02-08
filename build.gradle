@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'io.github.gradle-nexus.publish-plugin'
+
+buildscript {
+    ext.kotlin_version = '1.5.20'
+    ext.detekt_version = '1.13.1'
+    repositories {
+        google()
+        maven { url "https://plugins.gradle.org/m2/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+
+        // maven central dependencies
+        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
+        classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.30'
+
+        // ktlint & detekt dependencies
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:10.2.0"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detekt_version"
+    }
+}
+
+subprojects {
+    pluginManager.withPlugin('kotlin-android') {
+        apply from: "$rootDir/scripts/static-analysis/code-analysis.gradle"
+    }
+}
+
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 32
+    compileSdkVersion = 32
+    buildToolsVersion = '32.0.0'
+
+    androidXCoreVersion = '1.7.0'
+    moshiVersion = '1.13.0'
+}
+
+task installGitHook(type: Copy) {
+    from new File(rootProject.rootDir, 'scripts/pre-commit')
+    into { new File(rootProject.rootDir, '.git/hooks') }
+    fileMode 0777
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+apply from: "$rootDir/scripts/publish/root.gradle"
+apply from: "$rootDir/scripts/project-dependancy-graph.gradle"
