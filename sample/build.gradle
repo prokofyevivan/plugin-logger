@@ -37,7 +37,6 @@ android {
 
 dependencies {
     implementation 'com.plutolib:pluto:1.1.8-alpha'
-    implementation 'com.plutolib.plugins:preferences:1.1.7-alpha'
     implementation project(path: ':plugin-logger')
 
     implementation 'androidx.core:core-ktx:1.7.0'
