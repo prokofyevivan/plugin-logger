@@ -11,6 +11,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //to test stage deployment
+        maven {
+            url "https://s01.oss.sonatype.org/content/groups/staging/"
+        }
         jcenter()
     }
 }

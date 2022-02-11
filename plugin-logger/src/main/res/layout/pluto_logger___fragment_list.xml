@@ -20,9 +20,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/pluto___close"
+                android:contentDescription="@string/pluto_logger___close"
                 android:paddingHorizontal="@dimen/pluto___margin_small"
-                android:src="@drawable/pluto___ic_close"
+                android:src="@drawable/pluto_logger___ic_close"
                 app:layout_constraintBottom_toBottomOf="@+id/title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/title" />
@@ -51,9 +51,9 @@
                 android:layout_height="0dp"
                 android:layout_marginVertical="@dimen/pluto___margin_mini"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/pluto___more_options"
+                android:contentDescription="@string/pluto_logger___more_options"
                 android:paddingHorizontal="@dimen/pluto___margin_small"
-                android:src="@drawable/pluto___ic_more"
+                android:src="@drawable/pluto_logger___ic_more"
                 app:layout_constraintBottom_toBottomOf="@+id/title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/title" />
