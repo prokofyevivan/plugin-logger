@@ -9,7 +9,7 @@ Pluto logger is distributed through [***mavenCentral***](https://search.maven.or
 
 ```groovy
 dependencies {
-  debugImplementation 'com.plutolib.plugins:logger:1.0.0'
+  debugImplementation 'com.plutolib.plugins:logger:2.0.0'
 }
 ```
 
