@@ -7,9 +7,11 @@
 ### Add Gradle Dependencies
 Pluto logger is distributed through [***mavenCentral***](https://search.maven.org/artifact/com.plutolib.plugins/logger). To use it, you need to add the following Gradle dependency to your build.gradle file of you android app module.
 
+> Note: add both the pluto and the `no-op` variant to isolate the plugin from release builds.
 ```groovy
 dependencies {
   debugImplementation 'com.plutolib.plugins:logger:2.0.0'
+  releaseImplementation 'com.plutolib.plugins:logger-no-op:2.0.0'
 }
 ```
 
