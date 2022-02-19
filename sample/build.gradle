@@ -39,6 +39,9 @@ dependencies {
     implementation 'com.plutolib:pluto:2.0.0'
     implementation project(path: ':plugin-logger')
 
+//    implementation 'com.plutolib:pluto-no-op:2.0.0'
+//    implementation project(path: ':plugin-logger-no-op')
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
